@@ -15,15 +15,22 @@ body{
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    
 }
 
 .main_content{
     width: 1200px;
-    height: 1319px;
+    /* height: 1319px; */
     background: #FFF;
     box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.10);
     padding-left: 88px;
     padding-top: 102px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:  -20px 20px 60px #d9d9d9,
+    20px -20px 60px #ffffff;
 }
 
 /* ==============about=============== */
@@ -51,6 +58,8 @@ body{
     font-weight: 400;
     line-height: 1.7;
     color: #595959;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 
@@ -64,37 +73,141 @@ body{
 }
 
 .title{
-    margin-bottom: 12px;
+    margin-bottom: 30px;
     font-size: 22px;
 }
 
-.project_link{
-    text-decoration: none;
+.title_projects{
+    color: #FB6D3A;
+}
+
+.project{
+    width: 850px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    box-shadow:  -20px 20px 60px #d9d9d9,
+                20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link_project {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+
+}
+
+.box {
+    width: 140px;
+    /* height: auto; */
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0;
+    border: solid #999999 1px;
+  }
+  
+
+  .box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    border-radius: 8px;
+  }
+  
+  .box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    border-radius: 8px;
+  }
+  
+  .box:hover, .link_project:focus{
+    /* border-color: #FFF; */
+    color: #FB6D3A;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover:before, .link_project:focus .box:before {
+    border-color: #FB6D3A;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+    outline: none;
+    
+  }
+  
+  .box:hover:after, .link_project:focus .box:after {
+    border-color: #FB6D3A;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+  }
+  
+
+
+
+.text_link_project{
+    display: block;
+    margin: 0;
+    color: #FB6D3A;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-left: 15px;
+
+}
+
+.project_info{
+    display: block;
     color: #595959;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.7;
-    
+    line-height: 1.7; 
 }
-
-ol li::marker {
-    color: #000;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.7;
-}
-
-.project_link:hover > ol li::marker, .project_link:focus > ol li::marker {
-    color: #FB6D3A;
-}
-
-
-.project_link:hover, .project_link:focus ol li::marker {
-    color: #FB6D3A;
-    text-decoration: underline;
-}
-
 
 /* ==============/projects=============== */
 /* ==============work=============== */
@@ -111,9 +224,7 @@ ol li::marker {
     font-size: 16px;
 }
 
-.period_three_organization{
-    margin-bottom: 8px;
-}
+
 
 /* ==============/work=============== */
 /* ==============Education=============== */
@@ -134,19 +245,89 @@ ol li::marker {
 /* ============Sidebar=============== */
 
 
+.sidebar_title{
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+
 .sidebar{
     position: relative;
+    padding-left: 40px;
     padding-top: 40px;
     width: 370px;
     background-color: #1E2939;
-    
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow:  -20px 20px 60px #d9d9d9,
+    20px -20px 60px #ffffff;
 }
+    
+
 
 
 .photo{
-    
+    position: relative;
     width: 370px;
+    left: -40px;
     /* height: 354px; */
 }
+
+
+.tech_skills_text, .soft_skill_text{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+
+}
+
+.tech_skill_list, .soft_skill_list{
+    padding-left: 16px;
+}
+
+.soft_skill_item::marker, .tech_skill_item::marker{
+    color: #FB6D3A;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.contact_link{
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+
+.icon-contacts{
+    /* width: 14px;
+    height: 14px; */
+    fill: #FFF;
+    margin-right: 5px;
+}
+
+
+
+.contact_link:hover{
+    color: #FB6D3A;
+    opacity: 1;
+}
+
+.contact_link:hover .icon-contacts{
+    fill: #FB6D3A;
+}
+
 
 /* ============/Sidebar=============== */

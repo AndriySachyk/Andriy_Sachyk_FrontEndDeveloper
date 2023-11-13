@@ -3,7 +3,7 @@ body{
     font-style: normal;
     color: #000;
     line-height: normal;
-
+    background-color: #F5F7FA;
 }
 
 
@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5 {
 
 /* ============Main=============== */
 .main {
-    background-color: #F5F7FA;
+
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -127,11 +127,6 @@ transform: scale(0.95) rotateZ(1.7deg);
 }
 
 
-.project_tools{
-    color: #FB6D3A;
-    font-size: 18px;
-    font-weight: 700;
-}
 
 
 .project_list{
@@ -145,6 +140,10 @@ transform: scale(0.95) rotateZ(1.7deg);
 }
 
 
+.box_text_link_project_project_info{
+    display: flex;
+    gap: 4px;
+}
 
 .text_link_project{
     display: block;
@@ -152,6 +151,7 @@ transform: scale(0.95) rotateZ(1.7deg);
     color: #000;
     font-size: 18px;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .project_info{
@@ -161,6 +161,24 @@ transform: scale(0.95) rotateZ(1.7deg);
     font-size: 15px;
     font-weight: 400;
     line-height: 1.7; 
+}
+
+.project_tools{
+    color: #FB6D3A;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.box_box_text_link_project_project_info_power_pulse{
+    display: inline;
+}
+
+.title_link_power_pulse{
+    margin-left: 15px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /* ==============/projects=============== */
@@ -209,6 +227,7 @@ transform: scale(0.95) rotateZ(1.7deg);
     line-height: 1.5;
     text-decoration: none;
     outline: none;
+    text-decoration: underline;
   }
   
   .link_organization:before {
@@ -309,6 +328,7 @@ transform: scale(0.95) rotateZ(1.7deg);
     color: #FB6D3A;
     font-size: 18px;
     font-weight: 700;
+    text-decoration: underline;
 }
 .position_university{
     margin-bottom: 12px;
@@ -406,6 +426,7 @@ transform: scale(0.95) rotateZ(1.7deg);
     font-weight: 400;
     line-height: 24px;
     text-decoration: none;
+    text-decoration: underline;
 }
 
 
